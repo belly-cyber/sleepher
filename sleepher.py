@@ -6,7 +6,18 @@ import sys
 
 sec_in_24    = 86400
 current_time =time.strftime('%H:%M:%S',time.localtime())
-help_menu = "\n\nsleepher.py [wake-up time] [-e[number of days off]]\n\texample: 'python3 sleepher.py 08:00'\n\t'wake-up' default time is 8:00am\n\t-e(weekEnd) default time is two days\n\t-h shows this message\n\n"
+help_menu = """
+sleepher.py [wake-up time] [-e[number of days]]
+    example: 'python3 sleepher.py'
+             'python3 sleepher.py -e'
+             'python3 sleepher.py -e 4'
+             python3 sleepher.py 13:00'
+    
+        'wake-up' default time is 8:00am
+        -e(weekEnd) default time is two days
+        -h shows this message
+
+"""
 
 if len(sys.argv) >1 and len(sys.argv[1])>=4:
     wakeup_time = sys.argv[1]
